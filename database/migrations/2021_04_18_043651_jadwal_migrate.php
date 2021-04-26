@@ -15,9 +15,9 @@ class JadwalMigrate extends Migration
     {
         Schema::create('jadwal', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_pasien');
             $table->integer('id_dokter');
-            $table->string('nama tindakan');
+            $table->string('jam');
+            $table->string('hari');
             $table->timestamps();
         });
     }

@@ -27,11 +27,9 @@ class AuthController extends Controller
         $salt = uniqid('', true);
             
         $save = DB::table('user')->insert([
-            'email' => $request->email,
             'username' => $request->username,
             'password' => md5($request->password).$salt,
             'salt' => $salt,
-            'role' => 1,
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
             ]);
@@ -62,7 +60,6 @@ class AuthController extends Controller
                     'isLogin' => true,
                     'id' => $user->id,
                     'username' => $user->username,
-                    'gambar' => $user->gambar
                     ]);
                 return redirect('/');
             }

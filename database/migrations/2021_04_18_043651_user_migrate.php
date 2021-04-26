@@ -18,7 +18,6 @@ class UserMigrate extends Migration
             $table->string('username');
             $table->char('password', 255);
             $table->char('salt', 255);
-            $table->string('gambar');
             $table->timestamps();
         });
     }

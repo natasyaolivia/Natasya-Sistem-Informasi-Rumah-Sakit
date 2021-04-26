@@ -18,7 +18,7 @@ class PegawaiMigrate extends Migration
             $table->integer('no_pegawai');
             $table->string('nama');
             $table->string('jabatan');
-            $table->dateTime('diterima');
+            $table->date('diterima');
             $table->string('telepon');
             $table->text('alamat');
             $table->timestamps();

@@ -18,7 +18,7 @@ class DokterMigrate extends Migration
             $table->integer('no_dokter');
             $table->string('nama');
             $table->string('spesialis');
-            $table->dateTime('diterima');
+            $table->date('diterima');
             $table->string('telepon');
             $table->text('alamat');
             $table->timestamps();

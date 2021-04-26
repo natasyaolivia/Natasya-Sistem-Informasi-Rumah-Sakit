@@ -91,6 +91,7 @@
 
                             <a href="/edit_tmptidur/{{$t->id}}"><i class="fas fa-pencil-alt" style="margin-right:5px"></i></a>
                             <form class="d-inline" method="post" action="/hapus_tmptidur">
+                                @csrf
                             <input type="hidden" value="{{$t->id}}" name="id">
                             <button class="btn" onclick="return confirm('Yakin mau menghapus?')"><i class="far fa-trash-alt"></i></button>
                             </form>

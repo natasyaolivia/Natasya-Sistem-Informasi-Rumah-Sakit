@@ -16,7 +16,7 @@ class TempatTidurMigrate extends Migration
     Schema::create('tempat_tidur', function (Blueprint $table) {
             $table->id();
             $table->integer('nomor');
-            $table->integer('ruang');
+            $table->string('ruang');
             $table->string('status');
             $table->string('pasien');
             $table->timestamps();

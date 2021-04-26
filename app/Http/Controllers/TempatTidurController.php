@@ -21,7 +21,7 @@ class TempatTidurController extends Controller
             'nomor' => 'required|max:3',
             'ruang' => 'required',
             'status' => 'required|in:Terisi,Kosong',
-            'pasien' => 'nullable|string',
+            'pasien' => 'nullable|string|required_if:status,Terisi',
             ]);
             
         $pasien = DB::table('pasien')->where('nama', $request->pasien)->first();
@@ -47,7 +47,7 @@ class TempatTidurController extends Controller
     public function hapus_tmptidur(Request $request){
         $id = $request->id;
         DB::table('tempat_tidur')->delete($id);
-        return redirect('/jadwal_praktek')->with('hapus', 'Data tempat tidur berhasil dihapus');
+        return redirect('/tempat_tidur')->with('hapus', 'Data tempat tidur berhasil dihapus');
     }
     
     public function edit_tmptidur($id){

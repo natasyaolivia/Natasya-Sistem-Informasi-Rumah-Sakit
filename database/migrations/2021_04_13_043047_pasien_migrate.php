@@ -16,10 +16,11 @@ class PasienMigrate extends Migration
     Schema::create('pasien', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('ruang');
+            $table->string('penyakit');
             $table->string('telepon');
             $table->text('alamat');
-            $table->dateTime('tanggal_lahir');
+            $table->date('tanggal_lahir');
+            $table->date('tanggal_masuk');
             $table->timestamps();
         });
     }
