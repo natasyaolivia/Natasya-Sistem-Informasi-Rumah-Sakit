@@ -27,3 +27,5 @@ Berikan default NULL pada kolom berikut:
 3. Hanya tersedia 1 role, yaitu Administrator
 
 *Proyek ini open source, silahkan gunakan sesuka anda. Jika mau berdonasi juga boleh :)
+
+https://saweria.co/yrartz
